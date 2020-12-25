@@ -1,6 +1,10 @@
 @start
+  *show
+    template:'default'
+    background:'https://s3.ap-south-1.amazonaws.com/com.alexasrm.jungle/what-age-should-child-read-201904.jpg'
+    title: house pic
   *say
-    Welcome to Hell Study!
+    Welcome to Hell Study! This game is about a son whose father want to make his son an engineer but son want to do other profession.
   *then 
     -> askyou
 
@@ -46,8 +50,96 @@
 @nowheretogo
   *say
    Your father is an Engineer so you have no choice rather than to become an Engineer.Now take a deep breathe and throw your other options in dustbin and say engineer.
+    You have to fight with your father to get your decision. Now click fight. You have no option.
    *then
-    -> highschool
+      set enemy as 'Father'
+      set OHP as 100
+      set PHP as 100
+      hear fight, yes , let's fight{
+      ->fight
+}      
+      hear no , na , never , nope{
+      -> end
+     } 
+
+
+@fight   
+{
+    *say
+      You attacked {enemy}!
+    *then
+      <-> fightdice
+      if !a{
+        decrease PHP by 10
+      ->update
+      }
+      if a{
+        decrease OHP by 10
+      ->update
+      }
+
+
+
+@fightdice
+  *then
+     roll 1d2
+     flag a
+     if rollResult != 1{
+       unflag a
+    }
+    >> RETURN
+ 
+
+@update                
+  *say
+
+    your health is {PHP} and opponent's health is {OHP}. It strikes again! 
+  *then
+    if PHP>0 and OHP>0{
+    -> forward     
+    }
+    if PHP>0 and OHP<=0{
+    -> youwon
+    }
+    if OHP>0 and PHP<=0{
+    -> tryagain
+    }
+
+@forward
+  *say
+    Fight didn't end. Give your best.Do you want to continue?
+  *then
+    hear yes, yeah, yeah, yeah{
+    -> fight
+   }
+    hear no, nah, nope, nah{
+      -> gobuddy
+    }
+    
+
+@gobuddy
+     *say
+       You have to fight otherwise it's not possible to get your passion. Try man!!
+     *then
+     -> fight
+@youwon
+  *say
+    You won man!!! Now you can go as your wish.
+  *then
+    -> genious
+    
+    
+    
+@tryagain
+  *say
+     Try again buddy!! You can do this.!! Fight again buddy. Do you want to try?
+  *then
+    hear yes, ya, ha, yeah{
+    -> nowheretogo
+    }
+    hear na, no, nope {
+    -> end
+    }
 
 @niceguy
   *say
