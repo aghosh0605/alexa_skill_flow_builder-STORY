@@ -1,0 +1,959 @@
+{
+    "pluginName": "default",
+    "scenes": [
+        {
+            "contents": [
+                {
+                    "narration": "Welcome to Hell Study! This game is about a son whose father want to make his son an engineer but son want to do other profession.",
+                    "sceneDirections": [
+                        {
+                            "directionType": "visuals",
+                            "parameters": {
+                                "template": "default",
+                                "background": "https://s3.ap-south-1.amazonaws.com/com.alexasrm.jungle/what-age-should-child-read-201904.jpg",
+                                "title": "house pic"
+                            }
+                        },
+                        {
+                            "directionType": "go to",
+                            "parameters": {
+                                "target": "askyou",
+                                "targetSceneProperty": "narration"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "start",
+            "customProperties": {
+                "sourceLocation": 0,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Do you want to play Hell  Study?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "yes",
+                                    "yup",
+                                    "yo",
+                                    "yep",
+                                    "ha",
+                                    "hum",
+                                    "always"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "goahead",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.YesIntent",
+                                    "flexaIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "no",
+                                    "na",
+                                    "never"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "end",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.NoIntent",
+                                    "flexbIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "askyou",
+            "customProperties": {
+                "sourceLocation": 346,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "So let's start from Nursery. From the kindergarden, do you want to go high school to learn more?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "yes",
+                                    "yup",
+                                    "yo",
+                                    "yep",
+                                    "ha",
+                                    "hum",
+                                    "always"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "highschool",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.YesIntent",
+                                    "flexaIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "no",
+                                    "na",
+                                    "never"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "fuckoff",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.NoIntent",
+                                    "flexbIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "goahead",
+            "customProperties": {
+                "sourceLocation": 528,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Welcome to high school! After hoghschool what you will do? Doctor, Engineer or Scientist or other profession?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "Doctor"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "nowheretogo",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": []
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "Scientist"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "nowheretogo",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": []
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "Other Profession",
+                                    "other",
+                                    "nothing"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "nowheretogo",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "flexeIntent",
+                                    "AMAZON.CancelIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "Engineer"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "niceguy",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": []
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "highschool",
+            "customProperties": {
+                "sourceLocation": 786,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Your father is an Engineer so you have no choice rather than to become an Engineer.Now take a deep breathe and throw your other options in dustbin and say engineer. \n    You have to fight with your father to get your decision. Now click fight. You have no option.",
+                    "sceneDirections": [
+                        {
+                            "directionType": "set",
+                            "parameters": {
+                                "variableName": "enemy",
+                                "variableValue": "Father"
+                            }
+                        },
+                        {
+                            "directionType": "set",
+                            "parameters": {
+                                "variableName": "OHP",
+                                "variableValue": "100"
+                            }
+                        },
+                        {
+                            "directionType": "set",
+                            "parameters": {
+                                "variableName": "PHP",
+                                "variableValue": "100"
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "fight",
+                                    "yes",
+                                    "let's fight"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "fight",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "flexgIntent",
+                                    "AMAZON.YesIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "no",
+                                    "na",
+                                    "never",
+                                    "nope"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "end",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.NoIntent",
+                                    "flexbIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "nowheretogo",
+            "customProperties": {
+                "sourceLocation": 1151,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "You attacked {enemy}!",
+                    "sceneDirections": [
+                        {
+                            "directionType": "save and go",
+                            "parameters": {
+                                "target": "fightdice",
+                                "targetSceneProperty": "narration"
+                            }
+                        },
+                        {
+                            "directionType": "condition",
+                            "parameters": {
+                                "condition": "!{a}",
+                                "directions": [
+                                    {
+                                        "directionType": "reduce",
+                                        "parameters": {
+                                            "variableName": "PHP",
+                                            "variableValue": "10"
+                                        }
+                                    },
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "update",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "condition",
+                            "parameters": {
+                                "condition": "{a}",
+                                "directions": [
+                                    {
+                                        "directionType": "reduce",
+                                        "parameters": {
+                                            "variableName": "OHP",
+                                            "variableValue": "10"
+                                        }
+                                    },
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "update",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "fight",
+            "customProperties": {
+                "sourceLocation": 1649,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "",
+                    "sceneDirections": [
+                        {
+                            "directionType": "roll dice",
+                            "parameters": {
+                                "diceString": "1d2"
+                            }
+                        },
+                        {
+                            "directionType": "flag",
+                            "parameters": {
+                                "variableName": "a"
+                            }
+                        },
+                        {
+                            "directionType": "condition",
+                            "parameters": {
+                                "condition": "{rollResult} != 1",
+                                "directions": [
+                                    {
+                                        "directionType": "unflag",
+                                        "parameters": {
+                                            "variableName": "a"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "return",
+                            "parameters": {}
+                        }
+                    ]
+                }
+            ],
+            "id": "fightdice",
+            "customProperties": {
+                "sourceLocation": 1873,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "your health is {PHP} and opponent's health is {OHP}. It strikes again!",
+                    "sceneDirections": [
+                        {
+                            "directionType": "condition",
+                            "parameters": {
+                                "condition": "{PHP}>0 && {OHP}>0",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "forward",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "condition",
+                            "parameters": {
+                                "condition": "{PHP}>0 && {OHP}<=0",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "youwon",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "condition",
+                            "parameters": {
+                                "condition": "{OHP}>0 && {PHP}<=0",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "tryagain",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "update",
+            "customProperties": {
+                "sourceLocation": 1992,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Fight didn't end. Give your best.Do you want to continue?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "yes",
+                                    "yeah",
+                                    "yeah",
+                                    "yeah"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "fight",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.YesIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "no",
+                                    "nah",
+                                    "nope",
+                                    "nah"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "gobuddy",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.NoIntent",
+                                    "flexhIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "forward",
+            "customProperties": {
+                "sourceLocation": 2266,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "You have to fight otherwise it's not possible to get your passion. Try man!!",
+                    "sceneDirections": [
+                        {
+                            "directionType": "go to",
+                            "parameters": {
+                                "target": "fight",
+                                "targetSceneProperty": "narration"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "gobuddy",
+            "customProperties": {
+                "sourceLocation": 2472,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "You won man!!! Now you can go as your wish.",
+                    "sceneDirections": [
+                        {
+                            "directionType": "go to",
+                            "parameters": {
+                                "target": "genious",
+                                "targetSceneProperty": "narration"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "youwon",
+            "customProperties": {
+                "sourceLocation": 2605,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Try again buddy!! You can do this.!! Fight again buddy. Do you want to try?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "yes",
+                                    "ya",
+                                    "ha",
+                                    "yeah"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "nowheretogo",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.YesIntent",
+                                    "flexaIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "na",
+                                    "no",
+                                    "nope"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "end",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "flexbIntent",
+                                    "AMAZON.NoIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "tryagain",
+            "customProperties": {
+                "sourceLocation": 2714,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "You are a copy of your father!! Chill on man! Your father will be very happy to know this. Let's have a party. After B.Tech do you wanna M.Tech? Yes or NO?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "yes",
+                                    "yup",
+                                    "yo",
+                                    "yep",
+                                    "ha",
+                                    "hum",
+                                    "always"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "genious",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.YesIntent",
+                                    "flexaIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "no",
+                                    "na",
+                                    "never"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "noproblem",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.NoIntent",
+                                    "flexbIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "niceguy",
+            "customProperties": {
+                "sourceLocation": 2926,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Genius man!! You are truely a student to learn!! Proud of you. I pray to GOD to give you a good job after M.Tech.",
+                    "sceneDirections": [
+                        {
+                            "directionType": "go to",
+                            "parameters": {
+                                "target": "end",
+                                "targetSceneProperty": "narration"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "genious",
+            "customProperties": {
+                "sourceLocation": 3237,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Now go your wish. No one will stop you. Get a good job!",
+                    "sceneDirections": [
+                        {
+                            "directionType": "go to",
+                            "parameters": {
+                                "target": "end",
+                                "targetSceneProperty": "narration"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "noproblem",
+            "customProperties": {
+                "sourceLocation": 3393,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "No way to shortcut BSDK! You don't have option. Take basic knowledge first as it's necessary. So choose to go High School by saying YES.",
+                    "sceneDirections": [
+                        {
+                            "directionType": "go to",
+                            "parameters": {
+                                "target": "goahead",
+                                "targetSceneProperty": "narration"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "fuckoff",
+            "customProperties": {
+                "sourceLocation": 3499,
+                "sourceID": "story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Goodbye from this boring game!I think it's boring!! If you loved it then don't forget to give feedback.",
+                    "sceneDirections": [
+                        {
+                            "directionType": "ending",
+                            "parameters": {}
+                        }
+                    ]
+                }
+            ],
+            "id": "end",
+            "customProperties": {
+                "sourceLocation": 3689,
+                "sourceID": "story.abc"
+            }
+        }
+    ],
+    "storyID": "story",
+    "storyTitle": "Story",
+    "alexaVoiceModel": {
+        "languageModel": {
+            "intents": [
+                {
+                    "name": "flexaIntent",
+                    "samples": [
+                        "yo",
+                        "ha",
+                        "hum",
+                        "always"
+                    ]
+                },
+                {
+                    "name": "flexbIntent",
+                    "samples": [
+                        "na"
+                    ]
+                },
+                {
+                    "name": "flexcIntent",
+                    "samples": [
+                        "doctor"
+                    ]
+                },
+                {
+                    "name": "flexdIntent",
+                    "samples": [
+                        "scientist"
+                    ]
+                },
+                {
+                    "name": "flexeIntent",
+                    "samples": [
+                        "other profession",
+                        "other"
+                    ]
+                },
+                {
+                    "name": "flexfIntent",
+                    "samples": [
+                        "engineer"
+                    ]
+                },
+                {
+                    "name": "flexgIntent",
+                    "samples": [
+                        "fight",
+                        "let's fight"
+                    ]
+                },
+                {
+                    "name": "flexhIntent",
+                    "samples": [
+                        "nah"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent"
+                },
+                {
+                    "name": "AMAZON.HelpIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOffIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOnIntent"
+                },
+                {
+                    "name": "AMAZON.NextIntent"
+                },
+                {
+                    "name": "AMAZON.NoIntent"
+                },
+                {
+                    "name": "AMAZON.PauseIntent"
+                },
+                {
+                    "name": "AMAZON.PreviousIntent"
+                },
+                {
+                    "name": "AMAZON.RepeatIntent"
+                },
+                {
+                    "name": "AMAZON.ResumeIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOffIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOnIntent"
+                },
+                {
+                    "name": "AMAZON.StartOverIntent"
+                },
+                {
+                    "name": "AMAZON.StopIntent"
+                },
+                {
+                    "name": "AMAZON.YesIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent"
+                },
+                {
+                    "name": "AMAZON.PageUpIntent"
+                },
+                {
+                    "name": "AMAZON.PageDownIntent"
+                },
+                {
+                    "name": "AMAZON.MoreIntent"
+                },
+                {
+                    "name": "AMAZON.FallbackIntent"
+                }
+            ],
+            "invocationName": "story"
+        }
+    }
+}
